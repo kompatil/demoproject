@@ -16,14 +16,14 @@ public class UserController
 @Autowired
 private UserService userservice;
 @PostMapping("usersave")
-public User saveUser(@RequestBody User user) 
+public User saveUser(@RequestBody User user)
 {
 	User user1=userservice.saveUser(user);
     return user1;
 }
 
 @DeleteMapping("/delete/{id}")
-public void deleteUser(@PathVariable("id")Integer id)throws Exception 
+public void deleteUser(@PathVariable("id")Integer id)throws Exception
 {
 	userservice.deleteUser(id);
 }

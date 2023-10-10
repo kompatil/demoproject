@@ -95,5 +95,5 @@ public class User
 				+ city + ", nationality=" + nationality + ", password=" + password + ", gender=" + gender + ", pancard="
 				+ pancard + ", mobileno=" + mobileno + ", age=" + age + "]";
 	}
-    
+
 }
