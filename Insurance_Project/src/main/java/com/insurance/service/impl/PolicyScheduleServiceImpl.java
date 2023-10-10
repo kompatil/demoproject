@@ -13,25 +13,30 @@ import com.insurance.services.PolicyScheduleService;
 public class PolicyScheduleServiceImpl  implements PolicyScheduleService {
 
 	 @Autowired
-	 private PolicyScheduleRepository policyscheduleRepository;
+	 private PolicyScheduleRepository policyschedulerepository;
 
 	@Override
 	public PolicySchedule savePolicySchedule(PolicySchedule policyschedule)
 	{
-	  PolicySchedule policydetails=policyscheduleRepository.save(policyschedule);
+	  PolicySchedule policydetails=policyschedulerepository.save(policyschedule);
 		return policydetails;
 	}
 
 	@Override
 	public PolicySchedule updatePolicySchedule(PolicySchedule policyschedule) {
-		PolicySchedule updatedetails=policyscheduleRepository.save(policyschedule);
+		PolicySchedule updatedetails=policyschedulerepository.save(policyschedule);
 		return updatedetails;
 	}
 
 	@Override
 	public PolicySchedule getPolicyScheduleById(Integer Id) {
-		PolicySchedule getpolicy =policyscheduleRepository.findById(Id);
+		PolicySchedule getpolicy =policyschedulerepository.findById(Id);
 		return getpolicy;
+	}
+
+	@Override
+	public void deletePolicySchedule(Integer id) {
+		policyschedulerepository.deleteById(id);
 	}
 
 }

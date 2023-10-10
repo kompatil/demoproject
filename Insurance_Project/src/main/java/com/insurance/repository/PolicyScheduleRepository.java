@@ -14,5 +14,6 @@ import com.insurance.model.PolicySchedule;
 public interface PolicyScheduleRepository extends CrudRepository<PolicySchedule ,Serializable>
 {
 	public PolicySchedule findById(Integer Id);
+	
 
 }

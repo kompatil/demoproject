@@ -1,6 +1,8 @@
 package com.insurance.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -31,10 +33,16 @@ public class PolicyScheduleController
 		return policy2;
 		
 	}
+	@GetMapping("/getPolicySchedule/{id}")
 	public PolicySchedule getPolicyScheduleById(@PathVariable("id") Integer Id)
 	{
 		PolicySchedule policy3=policyscheduleservice.getPolicyScheduleById(Id);
 		return policy3;
 		
+	}
+	@DeleteMapping("/deletePolicySchedule/{id}")
+	public void deletePolicySchedule(@PathVariable("id") Integer id)throws Exception
+	{
+		 policyscheduleservice.deletePolicySchedule(id);
 	}
 }

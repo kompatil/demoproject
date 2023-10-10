@@ -9,4 +9,6 @@ public interface PolicyScheduleService
 	public PolicySchedule updatePolicySchedule(PolicySchedule policyschedule);
 	
 	public PolicySchedule getPolicyScheduleById(Integer Id);
+	
+	public void deletePolicySchedule(Integer id);
 }
